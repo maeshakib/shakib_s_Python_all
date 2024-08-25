@@ -234,7 +234,7 @@ value = my_dict.setdefault("age", 30)  # Adds "age": 30 if "age" doesn't exist
 age = my_dict.get("age", 0)  # Returns 0 if "age" key is not found
 ```
 #### Dictionary Operations
-
+```python 
 #Merge Dictionaries:
 dict1 = {"a": 1, "b": 2}
 dict2 = {"b": 3, "c": 4}
@@ -259,13 +259,59 @@ dd = defaultdict(int)  # Creates a dictionary with a default value of 0 for any 
 dd["apples"] += 1
 ```
 
+## Traversing 
+- List & Tuple: Traverse using for loop or enumerate() for index and value.
+- Set: Traverse using for loop (unordered, no index).
+- Dictionary: Traverse keys with a for loop, or use items() for key-value pairs, keys() for keys, and values() for values.
 
+#### Traversing a List
+```python 
+#Using a for loop:
+my_list = ["apple", "banana", "cherry"]
+for item in my_list:
+    print(item)
 
+#Using enumerate() (to get index and value):
+for index, value in enumerate(my_list):
+    print(index, value)
+```
 
+#### Traversing a Tuple
+```python
+#Using a for loop:
+my_tuple = ("apple", "banana", "cherry")
+for item in my_tuple:
+    print(item)
 
+#Using enumerate() (to get index and value):
+for index, value in enumerate(my_tuple):
+    print(index, value)
+```
+#### Traversing a Set
+```python
+#Using a for loop:
+my_set = {"apple", "banana", "cherry"}
+for item in my_set:
+    print(item)
+```
+#### Traversing a Dictionary
+```python
+#Using a for loop (keys only):
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+for key in my_dict:
+    print(key)
+#Using items() (to get both keys and values):
+for key, value in my_dict.items():
+    print(key, value)
+#Using keys() (explicitly, though not necessary):
+for key in my_dict.keys():
+    print(key)
 
+#Using values() (to get values only):
+for value in my_dict.values():
+    print(value)
+```
 
-    
 URL: https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true
 ```python 
     n = int(input().strip())
