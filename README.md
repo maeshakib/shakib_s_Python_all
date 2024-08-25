@@ -1,6 +1,6 @@
 # shakib_s_Python_all
-Python List Basics
-List Properties
+## Python List Basics
+#### List Properties
 - Ordered: Items maintain their order.
 - Changeable: You can modify, add, and remove items.
 - Allows Duplicates: Items with the same value are allowed.
@@ -20,7 +20,7 @@ print(my_list[:3])   # From start to index 2
 print(my_list[3:])   # From index 3 to end
 ```
 
-List Methods
+#### List Methods
 ```python 
 #Add Elements:
 my_list.append("orange")     # Add to the end
@@ -65,7 +65,7 @@ squared = [x**2 for x in range(10)]  # Create list with comprehension
 ```
 
 
-#### Python Tuple Basics
+## Python Tuple Basics
 ##### Tuple Properties
 
 - Ordered: Items maintain their order.
@@ -133,7 +133,7 @@ Return Multiple Values: Functions can return multiple values as a tuple
 
 ```
 
-
+## Python Set Basics
 
 #### Set Properties
 
@@ -194,6 +194,71 @@ my_set = set(my_list)  # {1, 2, 3}
 #Frozen Sets (Immutable Sets):
 frozen = frozenset({"apple", "banana", "cherry"})
 ```
+
+## Python Dictionary Basics
+
+```python
+#Create Dictionary with Constructor:
+this_dict = dict(name="Alice", age=25, city="New York")
+
+#Create a Dictionary:
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+#Access Values:
+print(my_dict["name"])  # Access by key
+
+#Get All Keys and Values:
+keys = my_dict.keys()       # Returns a view of all keys
+values = my_dict.values()   # Returns a view of all values
+items = my_dict.items()     # Returns a view of all key-value pairs
+```
+#### Dictionary Methods
+```python 
+#Add or Update Elements:
+my_dict["email"] = "alice@example.com"  # Add new key-value pair
+my_dict["age"] = 26                     # Update existing value
+
+#Remove Elements:
+my_dict.pop("age")           # Remove key-value pair by key
+del my_dict["city"]          # Remove key-value pair by key
+my_dict.clear()              # Remove all key-value pairs
+
+#Check if Key Exists:
+if "name" in my_dict:
+    print("Key exists")
+
+#Set Default: Return value if key exists, otherwise set it
+value = my_dict.setdefault("age", 30)  # Adds "age": 30 if "age" doesn't exist
+
+#Get Value Safely:
+age = my_dict.get("age", 0)  # Returns 0 if "age" key is not found
+```
+#### Dictionary Operations
+
+#Merge Dictionaries:
+dict1 = {"a": 1, "b": 2}
+dict2 = {"b": 3, "c": 4}
+merged_dict = {**dict1, **dict2}  # {'a': 1, 'b': 3, 'c': 4}
+
+#Iterate Over Dictionary:
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
+#Dictionary Comprehension:
+squares = {x: x**2 for x in range(6)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+#Nested Dictionaries:
+nested_dict = {
+    "person1": {"name": "Alice", "age": 25},
+    "person2": {"name": "Bob", "age": 30}
+}
+
+#Defaultdict (from collections module):
+from collections import defaultdict
+dd = defaultdict(int)  # Creates a dictionary with a default value of 0 for any new key
+dd["apples"] += 1
+```
+
 
 
 
