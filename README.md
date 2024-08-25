@@ -319,6 +319,52 @@ for value in my_dict.values():
     print(value)
 ```
 
+
+URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-1-reverse-a-list-in-python
+```python
+#Given:list1 = [100, 200, 300, 400, 500]
+#Expected output:[500, 400, 300, 200, 100]
+
+list1 = [100, 200, 300, 400, 500]
+#Option 1: Reverse In-Place and Print the Original List
+list1.reverse()
+print(list1)
+
+#Option 2: Use Slicing to Reverse and Assign to a New List
+newlist=list1[::-1] #list[start:stop:step]
+
+#Option 3: Use reversed() Function
+newlist = list(reversed(list1))  # reversed() returns an iterator, list() converts it back to a list
+```
+
+URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-2-concatenate-two-lists-index-wise
+```python
+#Given:
+#list1 = ["M", "na", "i", "Ke"]
+#list2 = ["y", "me", "s", "lly"]
+#Expected output:
+#['My', 'name', 'is', 'Kelly']
+
+#Example with Different Lengths (you might want to use itertools.zip_longest() from the itertools module to fill in missing values.)
+from itertools import zip_longest
+list1 = ["A", "B", "C", "D"]
+list2 = ["1", "2", "3"]
+# Concatenate two lists index-wise, filling missing values with an empty string
+concatenated_list = [i + j for i, j in zip_longest(list1, list2, fillvalue="")]
+print(concatenated_list)
+```
+
+
+
+
+
+
+
+
+
+
+
+
 URL: https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true
 ```python 
     n = int(input().strip())
