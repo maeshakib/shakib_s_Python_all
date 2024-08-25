@@ -345,6 +345,15 @@ URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-2-conc
 #Expected output:
 #['My', 'name', 'is', 'Kelly']
 
+
+list1 = ["A", "B", "C"]
+list2 = ["1", "2", "3"]
+# Concatenate two lists index-wise
+concatenated_list = [i + j for i, j in zip(list1, list2)]
+print(concatenated_list)
+
+
+
 #Example with Different Lengths (you might want to use itertools.zip_longest() from the itertools module to fill in missing values.)
 from itertools import zip_longest
 list1 = ["A", "B", "C", "D"]
@@ -354,10 +363,20 @@ concatenated_list = [i + j for i, j in zip_longest(list1, list2, fillvalue="")]
 print(concatenated_list)
 ```
 
+URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-3-turn-every-item-of-a-list-into-its-square
+```python
+#Solution 1: Using loop and list method
+list=[1, 2, 3, 4, 5, 6, 7]
+newList=[]
+for i in list:
+  newList.append(i*i)
+print(newList)
 
-
-
-
+#Solution 2: Use list comprehension
+list=[1, 2, 3, 4, 5, 6, 7]
+newlist= [i*i for i in list]
+print(newlist)
+```
 
 
 
