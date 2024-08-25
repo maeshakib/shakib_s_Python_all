@@ -123,6 +123,78 @@ if "apple" in my_tuple:
 my_tuple = ("apple", [1, 2, 3])
 my_tuple[1][0] = 4  # You can change mutable elements like lists within a tuple
 ```
+```python 
+#Create Tuple with Constructor:
+this_tuple = tuple(("apple", "banana", "cherry"))
+
+#Applications of Tuples
+Function Arguments: Tuples are often used to pass multiple arguments to functions.
+Return Multiple Values: Functions can return multiple values as a tuple
+
+```
+
+
+
+#### Set Properties
+
+- Unordered: Items do not have a defined order.
+- Unindexed: Items cannot be accessed by index.
+- No Duplicates: Sets do not allow duplicate values. Adding a duplicate value will have no effect.
+
+```python 
+#Create Set with Constructor:
+this_set = set(("apple", "banana", "cherry"))
+```
+
+#### Set Methods
+```python 
+#Add Elements:
+my_set.add("orange")  # Add a single element
+my_set.update(["grape", "melon"])  # Add multiple elements
+
+#Remove Elements:
+my_set.remove("banana")  # Remove specified element; raises KeyError if not found
+my_set.discard("banana")  # Remove specified element; does not raise an error if not found
+my_set.pop()  # Remove and return an arbitrary element
+my_set.clear()  # Remove all elements
+
+#Subset and Superset:
+is_subset = set1.issubset(set2)  # Check if set1 is a subset of set2
+is_superset = set1.issuperset(set2)  # Check if set1 is a superset of set2
+
+#Disjoint Sets: Check if two sets have no common elements
+is_disjoint = set1.isdisjoint(set2)
+
+
+```
+
+#### Set Operations
+```python 
+#Union: Combine two sets
+set1 = {"apple", "banana"}
+set2 = {"cherry", "orange"}
+union_set = set1.union(set2)  # {'apple', 'banana', 'cherry', 'orange'}
+
+#Intersection: Get common elements
+intersection_set = set1.intersection(set2)
+
+#Difference: Get elements in one set but not in the other
+difference_set = set1.difference(set2)
+
+#Symmetric Difference: Get elements in either set, but not both
+sym_diff_set = set1.symmetric_difference(set2)
+```
+
+#### Advanced Tips
+```python 
+#Convert List to Set (Remove Duplicates):
+my_list = [1, 2, 2, 3]
+my_set = set(my_list)  # {1, 2, 3}
+
+#Frozen Sets (Immutable Sets):
+frozen = frozenset({"apple", "banana", "cherry"})
+```
+
 
 
 
