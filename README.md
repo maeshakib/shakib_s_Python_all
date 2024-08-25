@@ -47,6 +47,13 @@ count = my_list.count("cherry") # Count occurrences
 #Sorting and Reversing:
 my_list.sort()     # Sort the list (ascending by default)
 my_list.reverse()  # Reverse the order
+
+#The general syntax for slicing a list is:
+list[start:stop:step]
+#using slicing reverse list examble
+list1 = [100, 200, 300, 400, 500]
+newlist = list1[::-1]  # This creates a new list that is the reverse of list1
+print(newlist)         # Prints the reversed list
 ```
 
 List Constructor
