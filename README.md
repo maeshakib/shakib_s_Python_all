@@ -405,7 +405,7 @@ print( newList)
 ```
 
 
-##### Add new item to list after a specified item
+##### problem: Add new item to list after a specified item
 ##### URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-7-add-new-item-to-list-after-a-specified-item
 ```python
 def traverse_list(nested_list,value_to_insert):
@@ -424,8 +424,16 @@ print("Modified list:", list1)
 ```
 
 
+##### URL:https://pynative.com/python-list-exercise-with-solutions/#h-exercise-8-extend-nested-list-by-adding-the-sublist
+##### Extend nested list by adding the sublist
+```python
+list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
 
-
+# Sub list to add
+sub_list = ["h", "i", "j"]
+list1[2][1][2].extend(sub_list)
+print(list1)
+```
 
 
 
