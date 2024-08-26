@@ -459,6 +459,151 @@ for i,ele in enumerate(list1):
 print(list1)
 ```
 
+### Python Set Exercise with Solutions
+
+##### Exercise 1: Add a list of elements to a set
+##### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-1-add-a-list-of-elements-to-a-set
+```python
+#Given:
+sample_set = {"Yellow", "Orange", "Black"}
+sample_list = ["Blue", "Green", "Red"]
+#Expected output:
+{'Green', 'Yellow', 'Black', 'Orange', 'Red', 'Blue'}
+#Note: Set is unordered.
+
+
+#Solution one:
+sample_set.update(sample_list)
+print(sample_set)
+
+#Solution two:
+list_to_set= set(sample_list)
+sample_set.union(list_to_set)
+print(sample_set)
+#####################################
+
+
+ 
+##### Exercise 2: Return a new set of identical items from two sets
+#### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-2-return-a-new-set-of-identical-items-from-two-sets
+
+#Given:
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+#Expected output: {40, 50, 30}
+
+print(set1.intersection(set2))
+#set1.intersection_update(set2) 
+#use intersection_update if you want keep modification update
+
+##### Exercise 3: Get Only unique items from two sets
+#### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-3-get-only-unique-items-from-two-sets
+
+#Given:
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+#Expected output: {70, 40, 10, 50, 20, 60, 30}
+
+print( set1.union(set2))
+
+
+##### Exercise 4: Update the first set with items that don’t exist in the second set
+#### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-4-update-the-first-set-with-items-that-don-t-exist-in-the-second-set
+
+#Given:
+set1 = {10, 20, 30}
+set2 = {20, 40, 50}
+#Expected output: set1 {10, 30}
+#method set1.difference_update(set2) is used in Python to modify set1 by removing all elements found in set2
+set1.difference_update(set2)
+
+print( set1)
+###################################
+
+##### Exercise 5: Update the first set with items that don’t exist in the second set
+#### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-4-update-the-first-set-with-items-that-don-t-exist-in-the-second-set
+
+#Given:
+set1 = {10, 20, 30}
+set2 = {20, 40, 50}
+#Expected output: set1 {10, 30}
+#method set1.difference_update(set2) is used in Python to modify set1 by removing all elements found in set2
+set1.difference_update(set2)
+
+print( set1)
+###################################
+#The symmetric_difference_update and symmetric_difference methods in Python are both used to compute the symmetric difference between two sets, but they differ in how they handle the original set.
+
+Modification of Original Set:
+
+    symmetric_difference: Does not modify the original set; instead, it returns a new set.
+    symmetric_difference_update: Modifies the original set in place.
+
+Return Value:
+
+    symmetric_difference: Returns a new set with the symmetric difference.
+    symmetric_difference_update: Returns None (the operation is done in place).
+
+Use Case:
+
+    Use symmetric_difference when you need to keep the original set unchanged and work with a new set containing the symmetric difference.
+    Use symmetric_difference_update when you want to update the original set with the symmetric difference directly.
+
+
+
+##### Exercise 6: Return a set of elements present in Set A or B, but not both
+#### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-6-return-a-set-of-elements-present-in-set-a-or-b-but-not-both
+
+#Given:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+#Expected output: {20, 70, 10, 60}
+
+#method The symmetric_difference method returns a new set containing these unique elements 
+#set1 ^ set2 will do same
+print(set1.symmetric_difference(set2))
+ 
+###################################
+
+
+##### Exercise 8: Update set1 by adding items from set2, except common items
+##### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-8-update-set1-by-adding-items-from-set2-except-common-items
+
+#Given:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+#Expected output: {70, 10, 20, 60}
+
+set1.symmetric_difference_update(set2)
+print(set1)
+ 
+###################################
+
+##### Exercise7: Check if two sets have any elements in common. If yes, display the common elements
+##### URL: https://pynative.com/python-set-exercise-with-solutions/#h-exercise-7-check-if-two-sets-have-any-elements-in-common-if-yes-display-the-common-elements
+
+#Given:
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 80, 90, 10}
+#Expected output:Two sets have items in common {10}
+
+
+if set1.isdisjoint(set2):
+    print("no two set have common item")
+else:
+    print(" two set have common item")
+    print(set1.intersection(set2))
+ 
+###################################
+
+```
+
+
+
+
+
 
 #URL: https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true
 ```python 
