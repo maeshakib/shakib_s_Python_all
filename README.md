@@ -396,6 +396,43 @@ for   i,j in zip(list1,list2[::-1]):
 ```
 
 
+##### Problem: Remove empty strings from the list of strings
+##### URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-6-remove-empty-strings-from-the-list-of-strings
+```python
+list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+newList= list(filter(None,list1))
+print( newList) 
+```
+
+
+##### Add new item to list after a specified item
+##### URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-7-add-new-item-to-list-after-a-specified-item
+```python
+def traverse_list(nested_list,value_to_insert):
+    for i, element in enumerate(nested_list):
+        if isinstance(element, list):
+            traverse_list(element,value_to_insert)  # Recursively traverse sublist
+        else:
+            print(element)
+            if element==6000:
+                nested_list.insert(i+1,value_to_insert)
+                return
+value_to_in =7000
+list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+traverse_list(list1,value_to_in)
+print("Modified list:", list1)
+```
+
+
+
+
+
+
+
+
+
+
+
 
 #URL: https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true
 ```python 
