@@ -378,13 +378,26 @@ newlist= [i*i for i in list]
 print(newlist)
 ```
 
+```python
+list1 = [10, 20, 30, 40] 
+list2 = [100, 200, 300, 400]
+for   i,j in zip(list1,list2[::-1]):
+  print(i,j)
+```
+
+##### Problem: Iterate both lists simultaneously
+##### URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-5-iterate-both-lists-simultaneously
+```python
+#solution
+list1 = [10, 20, 30, 40] 
+list2 = [100, 200, 300, 400]
+for   i,j in zip(list1,list2[::-1]):
+  print(i,j)
+```
 
 
 
-
-
-
-URL: https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true
+#URL: https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true
 ```python 
     n = int(input().strip())
 if n%2 != 0:
