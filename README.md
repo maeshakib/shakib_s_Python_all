@@ -447,8 +447,17 @@ for i,ele in enumerate(list1):
 print(list1)
 ```
 
-
-
+##### URL: https://pynative.com/python-list-exercise-with-solutions/#h-exercise-10-remove-all-occurrences-of-a-specific-item-from-a-list
+##### write a program to remove all occurrences of item 20.
+```python
+list1 = [5, 10, 15, 20, 25, 50, 20]
+for i,ele in enumerate(list1):
+    if ele==20:
+        index_value20=list1.index(20)
+        list1.pop(index_value20)            # Remove by index
+        continue
+print(list1)
+```
 
 
 #URL: https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true
