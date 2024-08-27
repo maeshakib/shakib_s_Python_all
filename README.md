@@ -266,6 +266,57 @@ dd = defaultdict(int)  # Creates a dictionary with a default value of 0 for any 
 dd["apples"] += 1
 ```
 
+##### Exercise 1: Convert two lists into a dictionary
+##### URL: https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-1-convert-two-lists-into-a-dictionary
+```python 
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+mydict=dict()
+#solution one:
+#Expected output: {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+new=dict(zip(keys,values))
+print(new)
+
+#solution two:
+for i in range(len(keys)):
+    mydict.update({keys[i]:values[i]})
+print(mydict)
+```
+
+####URL: https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-2-merge-two-python-dictionaries-into-one
+##### Exercise 2: Merge two Python dictionaries into one
+```python 
+dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
+#Expected output: {'Ten': 10, 'Twenty': 20, 'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
+dict3=dict()
+dict3={**dict1,**dict2}
+print(dict3)
+```
+
+##### URL: https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-5-create-a-dictionary-by-extracting-the-keys-from-a-given-dictionary
+##### Exercise 5: Create a dictionary by extracting the keys from a given dictionary
+```python
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"}
+
+# Keys to extract
+keys = ["name", "salary"]
+new_dict=dict()
+for key,value in  sample_dict.items():
+    if key in keys:
+       new_dict[key]=value
+       
+print(new_dict)
+```
+
+
+
+
+
 ## Traversing 
 - List & Tuple: Traverse using for loop or enumerate() for index and value.
 - Set: Traverse using for loop (unordered, no index).
