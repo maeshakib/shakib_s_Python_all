@@ -313,6 +313,99 @@ for key,value in  sample_dict.items():
 print(new_dict)
 ```
 
+##### Exercise 6: Delete a list of keys from a dictionary
+##### URL: https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-6-delete-a-list-of-keys-from-a-dictionary
+```python
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+
+# Keys to remove
+keys = ["name", "salary"]
+
+for key  in keys:
+        sample_dict.pop(key)
+
+print(sample_dict)
+```
+
+##### Exercise 7: Check if a value exists in a dictionary
+
+##### URL: https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-7-check-if-a-value-exists-in-a-dictionary
+
+```python
+sample_dict = {'a': 100, 'b': 200, 'c': 300}
+if 200 in sample_dict.values():
+    print('200 present in a dict')
+
+```
+
+##### Exercise 8: Rename key of a dictionary
+##### URL:https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-8-rename-key-of-a-dictionary
+```python
+#Given:
+
+sample_dict = {
+  "name": "Kelly",
+  "age":25,
+  "salary": 8000,
+  "city": "New york"
+}
+#Expected output:
+
+#{'name': 'Kelly', 'age': 25, 'salary': 8000, 'location': 'New york'}
+
+sample_dict["location"]=sample_dict.pop("city")
+print(sample_dict)
+
+```
+
+
+##### Exercise 9: Get the key of a minimum value from the following dictionary
+##### URL: https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-9-get-the-key-of-a-minimum-value-from-the-following-dictionary
+
+```python
+sample_dict = {
+    'Physics': 82,
+    'Math': 65,
+    'history': 75
+}
+
+# Get the key of the minimum value
+min_key = min(sample_dict, key=sample_dict.get)
+
+print(min_key)
+
+```
+
+#### Exercise 10: Change value of a key in a nested dictionary
+
+#### URL: https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-10-change-value-of-a-key-in-a-nested-dictionary
+
+```python
+Given:
+
+sample_dict = {
+    'emp1': {'name': 'Jhon', 'salary': 7500},
+    'emp2': {'name': 'Emma', 'salary': 8000},
+    'emp3': {'name': 'Brad', 'salary': 500}
+}
+Expected output:
+
+{
+   'emp1': {'name': 'Jhon', 'salary': 7500},
+   'emp2': {'name': 'Emma', 'salary': 8000},
+   'emp3': {'name': 'Brad', 'salary': 8500}
+}
+
+sample_dict['emp3']['salary'] = 8500
+print(sample_dict)
+
+```
+
 
 
 
