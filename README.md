@@ -31,11 +31,27 @@ my_list.remove("banana")  # Remove by value
 my_list.pop(2)            # Remove by index
 my_list.clear()           # Remove all elements
 
+# Delete the poolhouse items from the list
+areas = ["hallway", 11.25, "kitchen", 18.0,
+        "chill zone", 20.0, "bedroom", 10.75,
+         "bathroom", 10.50, "poolhouse", 24.5,
+         "garage", 15.45]
+del areas[10] 
+
+
 #Modify Elements:
 my_list[1] = "mango"      # Change value at index 1
 
 #Copy List:
 new_list = my_list.copy()  # Creates a shallow copy
+
+#If you want to prevent changes in areas_copy from also taking effect in areas, you'll have to do a more explicit copy of the areas list with list() or by using [:].
+# Create an explicit copy using list()
+areas_copy = list(areas)
+# Create an explicit copy using slicing
+areas_copy = areas[:]
+
+
 
 #Combine Lists:
 my_list.extend(["grape", "melon"])  # Add elements of another list
