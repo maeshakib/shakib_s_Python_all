@@ -61,8 +61,21 @@ idx = my_list.index("cherry")   # Get index of element
 count = my_list.count("cherry") # Count occurrences
 
 #Sorting and Reversing:
-my_list.sort()     # Sort the list (ascending by default)
+my_list.sort()     # Sort the list (ascending by default return none)
 my_list.reverse()  # Reverse the order
+The easiest way to sort is with the sorted(list) function, which takes a list and returns a new list with those elements in sorted order.
+  a = [5, 1, 4, 3]
+  print(sorted(a))  ## [1, 3, 4, 5]
+
+The sorted() function can be customized through optional arguments. The sorted() optional argument reverse=True, e.g. sorted(list, reverse=True), makes it sort backwards.
+strs = ['aa', 'BB', 'zz', 'CC']
+  print(sorted(strs))  ## ['BB', 'CC', 'aa', 'zz'] (case sensitive)
+  print(sorted(strs, reverse=True))   ## ['zz', 'aa', 'CC', 'BB']
+strs = ['ccc', 'aaaa', 'd', 'bb']
+Custom Sorting With key=
+  print(sorted(strs, key=len))  ## ['d', 'bb', 'ccc', 'aaaa']
+  print(sorted(strs, key=str.lower))  ## ['aa', 'BB', 'CC', 'zz']
+
 
 #The general syntax for slicing a list is:
 list[start:stop:step]
@@ -778,3 +791,83 @@ else:
     elif n>20:
         print("Not Weird")
 ```
+
+To get help on the max() function, for example, you can use one of these calls:
+- help(max)
+- ?max
+
+Use the IPython Shell to open up the documentation on pow(). Do this by typing ?pow or help(pow) and hitting Enter.
+- pow() requires base and exp arguments; mod is optional.
+
+
+### Methods
+- Built-in functions are only
+- Function that belongs to objects are called methods
+
+- Calling a method is similar to calling a function (it takes arguments and returns
+- a value) but the syntax is different. We call a method by appending the method
+- name to the variable name using the period as a delimiter.
+- For example, the method upper takes a string and returns a new string with all
+- uppercase letters:
+- Instead of the function syntax upper(word), it uses the method syntax
+- word.upper().
+- >>> word = 'banana'
+- >>> new_word = word.upper()
+- >>> print(new_word)
+- BANANA
+
+
+# string to experiment with: place
+place = "poolhouse"
+
+# Use upper() on place
+place_up = place.upper()
+
+# Print out place and place_up
+print(place_up)
+
+## Print out the number of o's on the variable place by calling .count()
+# Print out the number of o's in place
+sub_string="o"
+print(place.count(sub_string))
+
+
+Use the .index() method to get the index of the element in areas that is equal to 20.0. Print out this index.
+Call .count() on areas to find out how many times 9.50 appears in the list. Again, simply print out this number.
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Print out the index of the element 20.0
+print(areas.index(20.0))
+
+# Print out how often 9.50 appears in areas
+print(areas.count(9.50))
+
+### Use .append() twice to add the size of the poolhouse and the garage again: 24.5 and 15.45, respectively. Make sure to add them in this order.
+Print out areas
+Use the .reverse() method to reverse the order of the elements in areas.
+
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Use append twice to add poolhouse and garage size
+areas.append(24.5)
+areas.append(15.45)
+
+
+# Print out areas
+print(areas)
+
+# Reverse the orders of the elements in areas
+areas.reverse()
+
+# Print out areas
+print(areas)
+
+
+
+
+
+
+
+
